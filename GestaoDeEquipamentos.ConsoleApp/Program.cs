@@ -14,16 +14,22 @@ class Program
         RepositorioEquipamento repositorioEquipamento = new RepositorioEquipamento();
         RepositorioChamado repositorioChamado = new RepositorioChamado();
 
-        TelaFabricante telaFabricante = new TelaFabricante(repositorioFabricante);
+        TelaFabricante telaFabricante = new TelaFabricante
+        (
+            repositorioFabricante
+        );
 
-        TelaEquipamento telaEquipamento = new TelaEquipamento(
+        TelaEquipamento telaEquipamento = new TelaEquipamento
+       (
            repositorioEquipamento,
            repositorioFabricante
        );
 
-        TelaChamado telaChamado = new TelaChamado();
-        telaChamado.repositorioChamado = repositorioChamado;
-        telaChamado.repositorioEquipamento = repositorioEquipamento;
+        TelaChamado telaChamado = new TelaChamado
+       (
+            repositorioEquipamento, 
+            repositorioChamado
+       );
 
         while (true)
         {

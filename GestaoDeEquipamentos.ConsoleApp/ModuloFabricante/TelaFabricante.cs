@@ -8,10 +8,13 @@ public class TelaFabricante : TelaBase
 {
     private RepositorioFabricante repositorioFabricante;
 
-    public TelaFabricante(RepositorioFabricante repositorioF) : base("Fabricante", repositorioF)
-    {
-       this.repositorioFabricante = repositorioF;
-    }
+    public TelaFabricante
+        (
+        RepositorioFabricante repositorioF
+        ) : base("Fabricante", repositorioF)
+        {
+           this.repositorioFabricante = repositorioF;
+        }
     public override void VisualizarRegistros(bool exibirCabecalho)
     {
         if (exibirCabecalho == true)
